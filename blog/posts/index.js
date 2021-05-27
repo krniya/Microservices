@@ -1,10 +1,12 @@
 const express = require("express")
 const { randomBytes } = require("crypto")
 const bodyParser = require("body-parser")
+const cors = require("cors")
 const app = express()
 const posts = {}
 
 app.use(bodyParser.json())
+app.use(cors())
 
 app.get('/posts', (req, res) => {
     res.send(post)
