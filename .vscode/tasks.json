@@ -1,0 +1,53 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "start",
+			"path": "blog/comments",
+			"problemMatcher": [],
+			"label": "npm: start - blog/comments",
+			"detail": "nodemon index.js",
+			"group": "build"
+		},
+		{
+			"type": "npm",
+			"script": "start",
+			"path": "blog/posts",
+			"problemMatcher": [],
+			"label": "npm: start - blog/posts",
+			"detail": "nodemon index.js",
+			"group": "build"
+		},
+		{
+			"type": "npm",
+			"script": "start",
+			"path": "blog/event-bus",
+			"problemMatcher": [],
+			"label": "npm: start - blog/event-bus",
+			"detail": "nodemon index.js",
+			"group": "build"
+		},
+		{
+			"type": "npm",
+			"script": "start",
+			"path": "blog/query",
+			"problemMatcher": [],
+			"label": "npm: start - blog/query",
+			"detail": "nodemon index.js",
+			"group": "build"
+		},
+		{
+			"type": "npm",
+			"script": "start",
+			"path": "blog/client",
+			"problemMatcher": [],
+			"label": "npm: start - blog/client",
+			"detail": "react-scripts start",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		}
+	]
+}
