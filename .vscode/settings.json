@@ -1,0 +1,5 @@
+{
+    "yaml.schemas": {
+        "kubernetes://schema/v1@pod": "file:///c%3A/Users/krnit/Documents/Microservices/blog/infra/k8s/posts.yml"
+    }
+}
