@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: posts
-        image: krniya/posts:1.0.0
+        image: krniya/posts:latest
         resources:
           limits:
             memory: "128Mi"
