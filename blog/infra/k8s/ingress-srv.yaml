@@ -5,13 +5,13 @@ metadata:
   labels:
     name: ingress-srv
   annotations: 
-    spec.ingressClassName: nginx
+    kubernetes.io/ingress.class: nginx
 spec:
   rules:
   - host: posts.com
     http:
       paths:
-      - pathType: Exact
+      - pathType: Prefix
         path: "/posts"
         backend:
           service:
