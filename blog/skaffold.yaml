@@ -1,0 +1,84 @@
+apiVersion: skaffold/v3
+kind: Config
+deploy:
+  kubectl: {}
+
+manifests:
+ rawYaml:
+ - ./infra/k8s/*
+
+build:
+  local:
+    push: false
+  artifacts:
+    - image: krniya/client
+      context: client
+      docker:
+        dockerfile: Dockerfile
+        noCache: false
+        pullParent: false
+        squash: false
+      sync:
+        manual:
+          - dest: .
+            src: 'src/**/*.js'
+
+    - image: krniya/comments
+      context: comments
+      docker:
+        dockerfile: Dockerfile
+        noCache: false
+        pullParent: false
+        squash: false
+      sync:
+        manual:
+          - dest: .
+            src: '*.js'
+
+    - image: krniya/event-bus
+      context: event-bus
+      docker:
+        dockerfile: Dockerfile
+        noCache: false
+        pullParent: false
+        squash: false
+      sync:
+        manual:
+          - dest: .
+            src: '*.js'
+
+    - image: krniya/moderation
+      context: moderation
+      docker:
+        dockerfile: Dockerfile
+        noCache: false
+        pullParent: false
+        squash: false
+      sync:
+        manual:
+          - dest: .
+            src: '*.js'
+
+    - image: krniya/posts
+      context: posts
+      docker:
+        dockerfile: Dockerfile
+        noCache: false
+        pullParent: false
+        squash: false
+      sync:
+        manual:
+          - dest: .
+            src: '*.js'
+
+    - image: krniya/query
+      context: query
+      docker:
+        dockerfile: Dockerfile
+        noCache: false
+        pullParent: false
+        squash: false
+      sync:
+        manual:
+          - dest: .
+            src: '*.js'
